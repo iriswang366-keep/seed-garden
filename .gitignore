@@ -1,0 +1,22 @@
+# dependencies
+node_modules
+
+# build output (Vercel builds this itself)
+dist
+
+# TS / Vite build artifacts
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+
+# large exported single-file demos (not source)
+*.html
+!index.html
+
+# OS / editor
+.DS_Store
+.vscode
+.idea
+
+# vercel
+.vercel

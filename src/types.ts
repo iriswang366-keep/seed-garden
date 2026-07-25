@@ -1,0 +1,9 @@
+export type TreeType='pine'|'poplar'|'fruit'|'sakura'|'maple'|'bamboo';
+export type Weather='sunny'|'rain'|'sunset';
+export type Terrain='meadow'|'forest'|'autumn';
+export type Task={id:string;title:string;minutes:number;done:boolean;treeType?:TreeType;pos?:{x:number;y:number}};
+export type Project={id:string;name:string;description:string;color:string;treeType:TreeType;tasks:Task[];createdAt:string;archived:boolean;terrain?:Terrain;weather?:Weather};
+export type FocusSession={id:string;projectId:string;taskId?:string;minutes:number;completedAt:string};
+export type Countdown={title:string;date:string};
+export type Settings={weather:Weather;terrain:Terrain;countdown?:Countdown|null;matureMinutes?:number};
+export type GardenState={projects:Project[];sessions:FocusSession[];settings:Settings};
